@@ -36,6 +36,15 @@ description: Explore expert insights on Data Loss Prevention, cybersecurity, reg
   {% if featured %}
   <div class="featured-card">
 
+    {% if featured.image %}
+    <img
+      src="{{ featured.image | relative_url }}"
+      alt="{{ featured.image_alt | default: featured.title }}"
+      class="featured-image"
+      loading="eager"
+    >
+    {% endif %}
+
     <span class="article-label">FEATURED INSIGHT</span>
 
     <h3>
@@ -76,6 +85,15 @@ description: Explore expert insights on Data Loss Prevention, cybersecurity, reg
     {% for post in site.posts limit:7 offset:1 %}
 
     <article class="article-card">
+
+      {% if post.image %}
+      <img
+        src="{{ post.image | relative_url }}"
+        alt="{{ post.image_alt | default: post.title }}"
+        class="article-image"
+        loading="lazy"
+      >
+      {% endif %}
 
       <span class="article-label">
         {{ post.categories | first | default: "Cybersecurity" }}
