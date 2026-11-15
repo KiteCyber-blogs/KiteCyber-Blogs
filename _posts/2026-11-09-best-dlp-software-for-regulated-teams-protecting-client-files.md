@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Best DLP Software for Regulated Teams Protecting Client Files and Privileged Documents"

@@ -199,11 +199,61 @@ body {
   color: #101b35;
 }
 
+.kc-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.kc-header-bar,
+.kc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 78px;
+}
+
+.kc-logo img {
+  display: block;
+  height: 46px;
+  width: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.kc-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.kc-nav a {
+  color: #263449;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.kc-nav a:hover {
+  background: #f3f0ff;
+  color: #3c24c9;
+}
+
+.kc-footer {
+  padding: 8px 0;
+}
+
+.kc-footer p {
+  margin: 0;
+}
+
 /* Footer */
 .site-footer {
   background: #101b35;
   color: #d5e2ef;
   border-top: none;
+  margin-top: 48px;
 }
 
 .site-footer,

@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Best Microsoft Purview Alternatives for Mid-Market Companies Outside the E5 License"

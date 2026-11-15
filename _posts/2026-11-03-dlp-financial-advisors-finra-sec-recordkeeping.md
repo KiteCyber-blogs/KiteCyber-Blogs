@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "DLP for Financial Advisors: Meeting FINRA and SEC Recordkeeping Rules Without Slowing Down Client Communications"

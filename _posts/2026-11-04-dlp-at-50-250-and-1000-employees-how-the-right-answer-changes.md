@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "DLP at 50, 250, and 1,000 Employees: How the Right Answer Changes as You Grow"

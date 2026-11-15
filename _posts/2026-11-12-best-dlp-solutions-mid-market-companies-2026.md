@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Best Data Loss Prevention Solutions for Mid-Market Companies in 2026: A Shortlist for 250 to 1,000 Employee Security Teams"
