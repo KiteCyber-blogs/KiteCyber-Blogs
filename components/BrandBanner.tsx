@@ -1,3 +1,5 @@
+import { withBase } from "@/lib/site";
+
 export function BrandBanner({
   images,
   slot,
@@ -12,7 +14,7 @@ export function BrandBanner({
       {images.map((src) => (
         <img
           key={src}
-          src={src}
+          src={withBase(src)}
           alt={slot === "header" ? "KiteCyber header" : "KiteCyber footer"}
         />
       ))}

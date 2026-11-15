@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="kc-header">
+      <div class="wrapper kc-header-bar">
+        <a class="kc-logo" href="https://www.kitecyber.com/">
+          <img src="{{ '/public/images/brand/kite-logo.png' | relative_url }}" alt="KiteCyber">
+        </a>
+        <nav class="kc-nav" aria-label="Primary">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/' | relative_url }}">Blogs</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper kc-footer">
+        <a class="kc-logo" href="https://www.kitecyber.com/">
+          <img src="{{ '/public/images/brand/kite-logo.png' | relative_url }}" alt="KiteCyber">
+        </a>
+        <p>&copy; {{ site.time | date: "%Y" }} KiteCyber. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

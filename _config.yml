@@ -1,3 +1,15 @@
 title: "KiteCyber Blog"
-description: "Insights on Data Loss Prevention, Cybersecurity, Data Security and Compliance."
+description: "Insights on data loss prevention, cybersecurity, regulatory compliance, and GenAI security."
 theme: minima
+exclude:
+  - node_modules
+  - .next
+  - out
+  - app
+  - components
+  - lib
+  - package.json
+  - package-lock.json
+  - next.config.ts
+  - tsconfig.json
+  - next-env.d.ts

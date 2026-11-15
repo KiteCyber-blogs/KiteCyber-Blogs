@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Best DLP Solutions for Small Accounting and Tax Firms Handling Client Financial Records"

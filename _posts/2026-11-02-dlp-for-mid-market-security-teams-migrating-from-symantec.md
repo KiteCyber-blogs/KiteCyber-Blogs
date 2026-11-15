@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "DLP for Mid-Market Security Teams Migrating from Symantec"

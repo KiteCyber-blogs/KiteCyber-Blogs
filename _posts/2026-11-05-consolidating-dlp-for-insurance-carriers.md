@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Consolidating DLP for Insurance Carriers: Replacing Point Tools With One Endpoint Agent Ahead of an Audit"

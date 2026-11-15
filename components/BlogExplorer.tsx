@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { PostCard } from "@/components/PostCard";
 import type { PostSummary } from "@/lib/posts";
 
@@ -9,6 +9,7 @@ const TOPICS = ["All", "Data Loss Prevention", "GenAI Security", "Compliance"] a
 
 export function BlogExplorer({ posts }: { posts: PostSummary[] }) {
   const params = useSearchParams();
+  const pathname = usePathname();
   const router = useRouter();
   const requested = params.get("topic");
   const topic =
@@ -29,7 +30,7 @@ export function BlogExplorer({ posts }: { posts: PostSummary[] }) {
   }, [posts, query, topic]);
 
   function selectTopic(next: string) {
-    const href = next === "All" ? "/blogs" : `/blogs?topic=${encodeURIComponent(next)}`;
+    const href = next === "All" ? pathname : `${pathname}?topic=${encodeURIComponent(next)}`;
     router.replace(href, { scroll: false });
   }
 

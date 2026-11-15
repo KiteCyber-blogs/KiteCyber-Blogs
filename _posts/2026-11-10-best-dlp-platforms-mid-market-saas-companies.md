@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Best DLP Platforms for Mid-Market SaaS Companies Protecting Customer Data and Source Code"

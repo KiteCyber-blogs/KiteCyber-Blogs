@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
+import { withBase } from "@/lib/site";
 
 const POSTS_DIR = path.join(process.cwd(), "_posts");
 
@@ -65,7 +66,7 @@ function normalizeImageUrl(url: string): string | undefined {
     "public",
     src.replace(/^\//, "").split("/").map((part) => decodeURIComponent(part)).join(path.sep),
   );
-  return fs.existsSync(diskPath) ? src : undefined;
+  return fs.existsSync(diskPath) ? withBase(src) : undefined;
 }
 
 function extractImage(markdown: string): { src?: string; alt?: string } {
@@ -192,9 +193,10 @@ export function toSummary(post: Post): PostSummary {
 }
 
 export function articleBody(markdown: string): string {
-  let text = markdown.replace(/^\uFEFF/, "").trim();
+  let text = markdown.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n").trim();
   text = text.replace(/^#\s+[^\n]+\n+/, "");
-  text = text.replace(/^!\[[^\]]*\]\([^)]+\)\n+/, "");
+  // The first image is already shown above the article.
+  text = text.replace(/!\[[^\]]*\]\([^)]+\)\s*/, "");
   return rewriteImages(text).trim();
 }
 

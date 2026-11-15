@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "DLP for Your First SOC 2 Audit: What a 100-Person Company Actually Needs"

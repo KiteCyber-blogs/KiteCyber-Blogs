@@ -3,18 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { demoUrl, trialUrl } from "@/lib/site";
+import { websiteUrl, withBase } from "@/lib/site";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/#topics", label: "Topics" },
-  { href: "/#about", label: "About" },
 ];
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
-  if (href.startsWith("/#")) return false;
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
@@ -29,9 +26,9 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="shell header-bar">
-        <Link href="/" className="logo">
-          <img src="/images/brand/kite-logo.png" alt="KiteCyber" />
-        </Link>
+        <a className="logo" href={websiteUrl}>
+          <img src={withBase("/images/brand/kite-logo.png")} alt="KiteCyber" />
+        </a>
 
         <button
           type="button"
@@ -59,14 +56,6 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="header-actions">
-            <a className="button button-ghost" href={trialUrl} target="_blank" rel="noopener noreferrer">
-              Start Free Trial
-            </a>
-            <a className="button button-primary" href={demoUrl} target="_blank" rel="noopener noreferrer">
-              Request a Demo
-            </a>
-          </div>
         </div>
       </div>
     </header>
